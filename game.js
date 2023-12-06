@@ -40,14 +40,12 @@ $(".btn").on("click", function() {
 // 5. Function to check answers
 function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-        console.log("Success")
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(() => {
                 nextSequence();
             }, 1000)
         }
     } else {
-        console.log("Wrong")
         playSound("wrong");
 
         $("body").addClass("game-over");
