@@ -1,13 +1,22 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  /* background: linear-gradient(150deg, #00A7FF 0%, #062B53 61%, #011F3F 100%); */
+  background-image: url("./image/bgColor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
+  border: 5px solid;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 .container {
