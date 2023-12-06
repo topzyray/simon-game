@@ -8,8 +8,17 @@ let started = false;
 
 let level = 0;
 
-// Detecting keydown event on windows document
+// Detecting keydown event on windows document to start
 $(document).keydown(function() {
+    if (!started) {
+        $("#level-title").text(`Level ${level}`);
+        nextSequence();
+        started = true;
+    }
+});
+
+// Press title document to start
+$("#level-title").click(function() {
     if (!started) {
         $("#level-title").text(`Level ${level}`);
         nextSequence();
@@ -45,7 +54,7 @@ function checkAnswer(currentLevel) {
         setTimeout(() => {
             $("body").removeClass("game-over");
         }, 200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Press Any Key or Click Here to Restart");
 
         startOver();
     }
